@@ -1,5 +1,11 @@
 # Anypay
 
+## نحوه نصب
+برای نصب Anypay، می‌توانید از Composer استفاده کنید. دستور زیر را در ترمینال خود اجرا کنید:
+
+### bash
+composer require morpheusadam/anypay
+
 ## معرفی
 Anypay یک کتابخانه PHP برای انجام تراکنش‌های پرداخت آنلاین است. این کتابخانه امکان اتصال به درگاه‌های پرداخت مختلف را فراهم می‌کند و از طریق یک API یکپارچه، تجربه‌ای ساده و یکنواخت برای توسعه‌دهندگان فراهم می‌آورد.
 ## ویژگی‌ها
@@ -60,8 +66,8 @@ $gateways = [
 ### php
 ```php
 $config = ['driver' => 'gatewayName', 'api_key' => 'your_api_key'];
-$anypay = new Samgeeksdev\Anypay\Anypay($config);
-$invoice = new Samgeeksdev\Anypay\Invoice();
+$anypay = new Morpheusadam\Anypay\Anypay($config);
+$invoice = new Morpheusadam\Anypay\Invoice();
 $invoice->amount(1000); // مبلغ به ریال
 $anypay->via('gatewayName')->purchase($invoice)->pay();
 ```
@@ -74,7 +80,7 @@ $gateway = 'gatewayName';
 $amount = 1000; // مبلغ به ریال
 
 try {
-    $anypay = new Samgeeksdev\Anypay\Anypay($config);
+    $anypay = new Morpheusadam\Anypay\Anypay($config);
     $response = $anypay->payWith($gateway, $amount, $config);
     echo $response->getContent(); // نمایش جزئیات پاسخ
 } catch (Exception $e) {
@@ -88,7 +94,7 @@ try {
 
  
 try {
-$anypay = new Samgeeksdev\Anypay\Anypay($config);
+$anypay = new Morpheusadam\Anypay\Anypay($config);
 $receipt = $anypay->verify();
 echo 'پرداخت تایید شد. شماره تراکنش: ' . $receipt->getTransactionId();
 } catch (Exception $e) {
