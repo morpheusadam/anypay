@@ -1,6 +1,8 @@
 # Anypay
 
-# Anypay
+```bash
+composer require morpheusadam/anypay
+```
 
 ## Introduction
 Anypay is a PHP library for conducting online payment transactions. This library provides the ability to connect to various payment gateways and offers a simple and uniform experience for developers through a unified API.
@@ -54,6 +56,7 @@ $gateways = [
 
 این درگاه‌ها به شما امکان می‌دهند تا با استفاده از تنظیمات مختلف، پرداخت‌های خود را از طریق درگاه‌های متنوع انجام دهید.
 
+
 ```
 ## How to Use
 To use Anypay, you first need to add it to your PHP project. Then, you can manage your payment transactions via the API methods.
@@ -69,6 +72,11 @@ $anypay = new Morpheusadam\Anypay\Anypay($config);
 $invoice = new Morpheusadam\Anypay\Invoice();
 $invoice->amount(1000); // amount in Rials
 $anypay->via('gatewayName')->purchase($invoice)->pay();
+```
+
+
+```bash
+composer require morpheusadam/anypay
 ```
 
 
