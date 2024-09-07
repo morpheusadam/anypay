@@ -124,3 +124,8 @@ $invoice = (new Invoice)->amount(1000);
 
 ## مجوز
 این پروژه تحت مجوز MIT منتشر شده است. شما می‌توانید نسخه کامل مجوز را در فایل LICENSE موجود در مخزن کد مشاهده کنید.
+## 📞 Contact Me
+<div align="center">
+    <a href="https://www.linkedin.com/in/hesam-ahmadpour" style="color: red; font-size: 20px; text-decoration: none;">LinkedIn</a> |
+    <a href="https://t.me/morpheusadam" style="color: red; font-size: 20px; text-decoration: none;">Telegram</a>
+</div>
